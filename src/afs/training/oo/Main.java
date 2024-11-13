@@ -16,6 +16,12 @@ package afs.training.oo;
 // fields: vehicles
 // method: speedUp
 
+// AC4: The acceleration of the bus depends on the engine(truck can only accelerate 2 km/h),
+// with gasoline engine acceleration is 2 km/h,
+// and with an electric engine the speed is 5 km/h.
+// Object: gasoline engine, electric engine
+// fields: accelerate
+
 public class Main {
     public static void main(String[] args) {
 //        Bus coolBus = new Bus("Cool Bus", 25);
@@ -24,12 +30,26 @@ public class Main {
 //        Truck truck = new Truck("Big Truck", 20);
 //        truck.speedUp();
 
-        Vehicle bus = new Vehicle("Cool Bus", 25);
-        Driver busDriver = new Driver(bus);
-        busDriver.speedUp(5);
+//        Vehicle bus = new Vehicle("Cool Bus", 25);
+//        Driver busDriver = new Driver(bus);
+//        busDriver.speedUp(5);
+//
+//        Vehicle truck = new Vehicle("Big Truck", 20);
+//        Driver truckDriver = new Driver(truck);
+//        truckDriver.speedUp(2);
 
-        Vehicle truck = new Vehicle("Big Truck", 20);
+        GasolineEngine gasolineEngine = new GasolineEngine();
+        Bus gasolineBus = new Bus("Cool Bus with gasoline engine", 25, gasolineEngine);
+        Driver gasolineBusDriver = new Driver(gasolineBus);
+        gasolineBusDriver.speedUp();
+
+        ElectricEngine electricEngine = new ElectricEngine();
+        Bus electricBus = new Bus("Cool Bus with electric engine", 25, electricEngine);
+        Driver electricBusDriver = new Driver(electricBus);
+        electricBusDriver.speedUp();
+
+        Truck truck = new Truck("Big Truck", 20);
         Driver truckDriver = new Driver(truck);
-        truckDriver.speedUp(2);
+        truckDriver.speedUp();
     }
 }

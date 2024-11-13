@@ -6,13 +6,16 @@ public class Vehicle {
 
     private int speed;
 
-    public Vehicle(String name, int speed) {
+    private final int acceleration;
+
+    public Vehicle(String name, int speed, int acceleration) {
         this.name = name;
         this.speed = speed;
+        this.acceleration = acceleration;
     }
 
-    public void speedUp(int accelerate) {
-        this.speed += accelerate;
+    public void speedUp() {
+        this.speed += this.acceleration;
         System.out.printf("%s: speed up to %d km/h \n", this.name, this.speed);
     }
 }

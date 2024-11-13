@@ -7,7 +7,7 @@ public class Driver {
         this.vehicle = vehicle;
     }
 
-    public void speedUp(int accelerate) {
-        vehicle.speedUp(accelerate);
+    public void speedUp() {
+        vehicle.speedUp();
     }
 }
