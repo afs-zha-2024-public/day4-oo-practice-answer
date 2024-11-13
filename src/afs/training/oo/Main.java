@@ -6,9 +6,15 @@ package afs.training.oo;
 // fields: name, speed
 // method: speedUp, getInformation
 
+// AC2: A truck named "Big Truck" with a speed of 20 km/h can accelerate(2 km/h every time) and display
+// information about the name and speed when speed up, with the following information like: "Big Truck: speed up to 22 km/h".
+
 public class Main {
     public static void main(String[] args) {
         Bus coolBus = new Bus("Cool Bus", 25);
         coolBus.speedUp();
+
+        Truck truck = new Truck("Big Truck", 20);
+        truck.speedUp();
     }
 }
